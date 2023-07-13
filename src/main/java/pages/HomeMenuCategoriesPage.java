@@ -8,22 +8,22 @@ public class HomeMenuCategoriesPage extends BasePage{
     public HomeMenuCategoriesPage(WebDriver driver) {super(driver);}
 
     By ShopByCategory = By.id("entry_217832");
-    By CategoryComponents = By.cssSelector("ul.navbar-nav li a");
-    By CategoryCameras = By.cssSelector("ul.navbar-nav li:nth-child(2) a");
-    By PhoneTabletsIpod = By.cssSelector("ul.navbar-nav li:nth-child(3) a");
-    By Software = By.cssSelector("ul.navbar-nav li:nth-child(4) a");
-    By MP3Players = By.cssSelector("ul.navbar-nav li:nth-child(5) a");
-    By LaptopsAndNotebooks = By.cssSelector("ul.navbar-nav li:nth-child(6) a");
-    By DesktopsAndMonitor = By.cssSelector("ul.navbar-nav li:nth-child(7) a");
-    By PrintersAndScanners = By.cssSelector("ul.navbar-nav li:nth-child(8) a");
-    By MiceAndTrackballs = By.cssSelector("ul.navbar-nav li:nth-child(9) a");
-    By FashionAndAccessories = By.cssSelector("ul.navbar-nav li:nth-child(10) a");
-    By BeautyAndSaloon = By.cssSelector("ul.navbar-nav li:nth-child(11) a");
-    By AutopartsAndAccessories = By.cssSelector("ul.navbar-nav li:nth-child(12) a");
-    By WashingMachine = By.cssSelector("ul.navbar-nav li:nth-child(13) a");
-    By GamingConsoles = By.cssSelector("ul.navbar-nav li:nth-child(14) a");
-    By AirConditioner = By.cssSelector("ul.navbar-nav li:nth-child(15) a");
-    By WebCameras = By.cssSelector("ul.navbar-nav li:nth-child(16) a");
+    By CategoryComponents = By.linkText("Components");
+    By CategoryCameras = By.linkText("Cameras");
+    By PhoneTabletsIpod = By.linkText("Phone, Tablets & Ipod");
+    By Software = By.linkText("Software");
+    By MP3Players = By.linkText("MP3 Players");
+    By LaptopsAndNotebooks = By.linkText("Laptops & Notebooks");
+    By DesktopsAndMonitor = By.linkText("Desktops and Monitors");
+    By PrintersAndScanners = By.linkText("Printers & Scanners");
+    By MiceAndTrackballs = By.linkText("Mice and Trackballs");
+    By FashionAndAccessories = By.linkText("Fashion and Accessories");
+    By BeautyAndSaloon = By.linkText("Beauty and Saloon");
+    By AutopartsAndAccessories = By.linkText("Autoparts and Accessories");
+    By WashingMachine = By.linkText("Washing machine");
+    By GamingConsoles = By.linkText("Gaming consoles");
+    By AirConditioner = By.linkText("Air conditioner");
+    By WebCameras = By.linkText("Web Cameras");
 
 
 
