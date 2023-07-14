@@ -3,10 +3,11 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class HomeMenuCategoriesPage extends BasePage{
+public class HomePage extends BasePage{
 
-    public HomeMenuCategoriesPage(WebDriver driver) {super(driver);}
+    public HomePage(WebDriver driver) {super(driver);}
 
+    By MyAccount = By.linkText("My account");
     By ShopByCategory = By.id("entry_217832");
     By CategoryComponents = By.linkText("Components");
     By CategoryCameras = By.linkText("Cameras");
@@ -24,9 +25,10 @@ public class HomeMenuCategoriesPage extends BasePage{
     By GamingConsoles = By.linkText("Gaming consoles");
     By AirConditioner = By.linkText("Air conditioner");
     By WebCameras = By.linkText("Web Cameras");
+    By CategoryDesktop = By.cssSelector("[alt=\"Desktops\"]");
+    By HomeButton = By.linkText("Home");
 
-
-
+    public void clickMyAccount() { driver.findElement(MyAccount).click(); }
     public void clickShopByCategory() { driver.findElement(ShopByCategory).click(); }
     public void clickCategoryComponents() { driver.findElement(CategoryComponents).click(); }
     public void clikcCategoryCameras() { driver.findElement(CategoryCameras).click(); }
@@ -44,8 +46,8 @@ public class HomeMenuCategoriesPage extends BasePage{
     public void clickGamingConsoles() { driver.findElement(GamingConsoles).click();}
     public void clickAirConditioner() { driver.findElement(AirConditioner).click();}
     public void clickWebCameras() { driver.findElement(WebCameras).click();}
-
-
+    public void clickCategoryDesktop() { driver.findElement(CategoryDesktop).click(); }
+    public void clickHomeButton() { driver.findElement(HomeButton).click(); }
 
 
 

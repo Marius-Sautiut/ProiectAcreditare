@@ -3,7 +3,7 @@ package testCases;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.BasePage;
-import pages.HomeMenuCategoriesPage;
+import pages.HomePage;
 import pages.LoginPage;
 
 public class LoginTestCases extends BasePage {
@@ -18,8 +18,9 @@ public class LoginTestCases extends BasePage {
 
     @Test
     public void login() throws InterruptedException {
+        HomePage homePage = new HomePage(driver);
 
-        loginPage.clickMyAccount();
+        homePage.clickMyAccount();
         loginPage.writeEmailField("mariussautiut@yahoo.com");
         loginPage.writePasswordField("Test@123");
         loginPage.clickLoginButton();

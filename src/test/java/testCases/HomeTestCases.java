@@ -1,24 +1,20 @@
 package testCases;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.testng.Assert;
-import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.BasePage;
-import pages.HomeMenuCategoriesPage;
+import pages.HomePage;
 import pages.LoginPage;
 
-public class HomeMenuCategoriesTestCases extends BasePage {
+public class HomeTestCases extends BasePage {
 
-    private HomeMenuCategoriesPage homeMenuCategoriesPage;
-    private LoginPage loginPage;
+    private HomePage homePage;
+
 
     @BeforeMethod
     public void setUp(){
         super.setUp();
-        homeMenuCategoriesPage = new HomeMenuCategoriesPage(driver);
+        homePage = new HomePage(driver);
     }
 //    @BeforeMethod
 //    public void setUp(){
@@ -158,14 +154,7 @@ public class HomeMenuCategoriesTestCases extends BasePage {
 //        Assert.assertEquals(actualText,expectedText, "The page text is not as expected");
 //    }
 
-    @Test
-    public void clickAddAndCheckIfIsAddedToCheckout() throws InterruptedException {
 
-        loginPage.clickMyAccount();
-        loginPage.writeEmailField("mariussautiut@yahoo.com");
-        loginPage.writePasswordField("Test@123");
-        loginPage.clickLoginButton();
-    }
 
 
 
