@@ -31,14 +31,15 @@ public class CheckoutTestCases extends BasePage {
         loginPage.clickLoginButton();
         homePage.clickHomeButton();
         homePage.clickCategoryDesktop();
-
+        //Hover over the product
         WebElement ele = driver.findElement(By.id("mz-product-grid-image-28-212408"));
         action.moveToElement(ele).perform();
 
         productsPage.clickAddProductHtcTouchHdToCart();
-//        wait(10000);
-//        productsPage.clickClosePopUp();
         productsPage.clickCartt();
+        Thread.sleep(10000);
+        productsPage.clickCheckoutButton();
+
 
     }
 
