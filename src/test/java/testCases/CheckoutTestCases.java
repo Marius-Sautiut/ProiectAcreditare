@@ -36,8 +36,9 @@ public class CheckoutTestCases extends BasePage {
         action.moveToElement(ele).perform();
 
         productsPage.clickAddProductHtcTouchHdToCart();
+        Thread.sleep(12000);
         productsPage.clickCartt();
-        Thread.sleep(10000);
+//        Thread.sleep(8000);
         productsPage.clickCheckoutButton();
 
 

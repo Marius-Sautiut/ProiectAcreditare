@@ -10,7 +10,7 @@ public class ProductsPage extends BasePage {
     By ProductHtcTouchHd = By.cssSelector("[onclick=\"cart.add('28');\"]");
 //    By ClosePopUp = By.xpath("//*[@id=\"notification-box-top\"]/div/div[1]/button/span");
     By Cart = By.id("entry_217825");
-    By CheckoutButton = By.xpath("//*[@id=\"entry_217851\"]/a");
+    By CheckoutButton = By.linkText("Checkout");
 
 
 
