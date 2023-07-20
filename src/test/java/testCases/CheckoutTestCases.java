@@ -3,6 +3,7 @@ package testCases;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.*;
@@ -18,6 +19,28 @@ public class CheckoutTestCases extends BasePage {
         checkoutPage = new CheckoutPage(driver);
     }
 
+    @Test
+    public void checkIfCheckoutCartIsEmpty() throws InterruptedException {
+        LoginPage loginPage = new LoginPage(driver);
+        HomePage homePage = new HomePage(driver);
+
+        homePage.clickMyAccount();
+        loginPage.writeEmailField("mariussautiut@yahoo.com");
+        loginPage.writePasswordField("Test@123");
+        loginPage.clickLoginButton();
+        loginPage.clickCart();
+        Thread.sleep(1000);
+        loginPage.clickCheckoutButton();
+
+        WebElement MyCheckoutValue = driver.findElement(By.xpath("//*[@id=\"content\"]/p"));
+        String expectedText = "Your shopping cart is empty!";
+        String actualtext = MyCheckoutValue.getText();
+        Assert.assertEquals(actualtext, expectedText, "The page text is not as expected");
+
+
+
+
+    }
     @Test
     public void clickAddAndCheckIfIsAddedToCheckout() throws InterruptedException {
         LoginPage loginPage = new LoginPage(driver);
@@ -37,8 +60,9 @@ public class CheckoutTestCases extends BasePage {
 
         productsPage.clickAddProductHtcTouchHdToCart();
         Thread.sleep(12000);
-        productsPage.clickCartt();
+        productsPage.clickCart();
 //        Thread.sleep(8000);
+        Thread.sleep(5000);
         productsPage.clickCheckoutButton();
 
 
