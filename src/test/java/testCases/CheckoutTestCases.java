@@ -37,10 +37,8 @@ public class CheckoutTestCases extends BasePage {
         String actualtext = MyCheckoutValue.getText();
         Assert.assertEquals(actualtext, expectedText, "The page text is not as expected");
 
-
-
-
     }
+
     @Test
     public void clickAddAndCheckIfIsAddedToCheckout() throws InterruptedException {
         LoginPage loginPage = new LoginPage(driver);
@@ -64,7 +62,6 @@ public class CheckoutTestCases extends BasePage {
 //        Thread.sleep(8000);
         Thread.sleep(5000);
         productsPage.clickCheckoutButton();
-
 
     }
 
