@@ -23,14 +23,15 @@ public class CheckoutTestCases extends BasePage {
     public void checkIfCheckoutCartIsEmpty() throws InterruptedException {
         LoginPage loginPage = new LoginPage(driver);
         HomePage homePage = new HomePage(driver);
+        ProductsPage productsPage = new ProductsPage(driver);
 
         homePage.clickMyAccount();
         loginPage.writeEmailField("mariussautiut@yahoo.com");
         loginPage.writePasswordField("Test@123");
         loginPage.clickLoginButton();
-        loginPage.clickCart();
+        productsPage.clickCart();
         Thread.sleep(1000);
-        loginPage.clickCheckoutButton();
+        productsPage.clickCheckoutButton();
 
         WebElement MyCheckoutValue = driver.findElement(By.xpath("//*[@id=\"content\"]/p"));
         String expectedText = "Your shopping cart is empty!";

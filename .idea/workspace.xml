@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c6ff4334-0005-45ac-9008-c07aef43989b" name="Changes" comment="Proiect Acreditare">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pages/MyAccountPages.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/testCases/MyAccountTestCases.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/MyAccountPages.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/MyAccountPages.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/testCases/CheckoutTestCases.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testCases/CheckoutTestCases.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testCases/HomeTestCases.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testCases/HomeTestCases.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testCases/MyAccountTestCases.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testCases/MyAccountTestCases.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,8 +126,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.MyAccountTestCases" />
-        <item itemvalue="TestNG.CheckoutTestCases" />
         <item itemvalue="TestNG.HomeTestCases" />
+        <item itemvalue="TestNG.CheckoutTestCases" />
         <item itemvalue="TestNG.LoginTestCases" />
       </list>
     </recent_temporary>
@@ -195,7 +197,14 @@
       <option name="project" value="LOCAL" />
       <updated>1689855070657</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Proiect Acreditare">
+      <created>1689936852485</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1689936852485</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
