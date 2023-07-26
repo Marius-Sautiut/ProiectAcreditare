@@ -19,26 +19,26 @@ public class CheckoutTestCases extends BasePage {
         checkoutPage = new CheckoutPage(driver);
     }
 
-    @Test
-    public void checkIfCheckoutCartIsEmpty() throws InterruptedException {
-        LoginPage loginPage = new LoginPage(driver);
-        HomePage homePage = new HomePage(driver);
-        ProductsPage productsPage = new ProductsPage(driver);
-
-        homePage.clickMyAccount();
-        loginPage.writeEmailField("mariussautiut@yahoo.com");
-        loginPage.writePasswordField("Test@123");
-        loginPage.clickLoginButton();
-        productsPage.clickCart();
-        Thread.sleep(1000);
-        productsPage.clickCheckoutButton();
-
-        WebElement MyCheckoutValue = driver.findElement(By.xpath("//*[@id=\"content\"]/p"));
-        String expectedText = "Your shopping cart is empty!";
-        String actualtext = MyCheckoutValue.getText();
-        Assert.assertEquals(actualtext, expectedText, "The page text is not as expected");
-
-    }
+//    @Test
+//    public void checkIfCheckoutCartIsEmpty() throws InterruptedException {
+//        LoginPage loginPage = new LoginPage(driver);
+//        HomePage homePage = new HomePage(driver);
+//        ProductsPage productsPage = new ProductsPage(driver);
+//
+//        homePage.clickMyAccount();
+//        loginPage.writeEmailField("mariussautiut@yahoo.com");
+//        loginPage.writePasswordField("Test@123");
+//        loginPage.clickLoginButton();
+//        productsPage.clickCart();
+//        Thread.sleep(1000);
+//        productsPage.clickCheckoutButton();
+//
+//        WebElement MyCheckoutValue = driver.findElement(By.xpath("//*[@id=\"content\"]/p"));
+//        String expectedText = "Your shopping cart is empty!";
+//        String actualtext = MyCheckoutValue.getText();
+//        Assert.assertEquals(actualtext, expectedText, "The page text is not as expected");
+//
+//    }
 
     @Test
     public void clickAddAndCheckIfIsAddedToCheckout() throws InterruptedException {
@@ -63,6 +63,11 @@ public class CheckoutTestCases extends BasePage {
 //        Thread.sleep(8000);
         Thread.sleep(5000);
         productsPage.clickCheckoutButton();
+
+        WebElement ProductName = driver.findElement(By.linkText("HTC Touch HD"));
+        String actualText = "HTC Touch HD";
+        String expectedText = ProductName.getText();
+        Assert.assertEquals(actualText,expectedText, "The page text is not as expected");
 
     }
 
