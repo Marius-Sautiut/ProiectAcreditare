@@ -215,6 +215,7 @@ public class MyAccountTestCases extends BasePage {
         LoginPage loginPage = new LoginPage(driver);
         HomePage homePage = new HomePage(driver);
 
+        Thread.sleep(2000);
         homePage.clickMyAccount();
         loginPage.writeEmailField("mariussautiut@yahoo.com");
         loginPage.writePasswordField("Test@123");
