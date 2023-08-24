@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c6ff4334-0005-45ac-9008-c07aef43989b" name="Changes" comment="Proiect Acreditare">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/CheckoutPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/CheckoutPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/testCases/CheckoutTestCases.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testCases/CheckoutTestCases.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/testCases/HomeTestCases.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testCases/HomeTestCases.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/testCases/LoginTestCases.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testCases/LoginTestCases.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/testCases/MyAccountTestCases.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testCases/MyAccountTestCases.java" afterDir="false" />
-    </list>
+    <list default="true" id="7572504f-e65f-47e4-92de-ea8aedf7b3b0" name="Changes" comment="Proiect Acreditare" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -54,7 +47,7 @@
       <recent name="C:\JavaProject\ProiectAcreditare\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.MyAccountTestCases">
+  <component name="RunManager" selected="TestNG.LoginTestCases">
     <configuration name="CheckoutTestCases" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ProiectAcreditare" />
       <extension name="coverage">
@@ -125,10 +118,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.MyAccountTestCases" />
         <item itemvalue="TestNG.LoginTestCases" />
-        <item itemvalue="TestNG.CheckoutTestCases" />
+        <item itemvalue="TestNG.MyAccountTestCases" />
         <item itemvalue="TestNG.HomeTestCases" />
+        <item itemvalue="TestNG.CheckoutTestCases" />
       </list>
     </recent_temporary>
   </component>
@@ -225,35 +218,7 @@
       <option name="project" value="LOCAL" />
       <updated>1690208891205</updated>
     </task>
-    <task id="LOCAL-00013" summary="Proiect Acreditare">
-      <created>1690213339492</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1690213339492</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Proiect Acreditare">
-      <created>1690384572393</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1690384572393</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Proiect Acreditare">
-      <created>1692869206228</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1692869206228</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Proiect Acreditare">
-      <created>1692869221630</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1692869221630</updated>
-    </task>
-    <option name="localTasksCounter" value="17" />
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
