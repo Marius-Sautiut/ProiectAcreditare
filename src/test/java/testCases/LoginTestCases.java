@@ -20,7 +20,7 @@ public class LoginTestCases extends BasePage {
     }
 
     @Test
-    public void login() throws InterruptedException {
+    public void loginSuccess() throws InterruptedException {
         HomePage homePage = new HomePage(driver);
 
         homePage.clickMyAccount();
@@ -36,7 +36,41 @@ public class LoginTestCases extends BasePage {
     }
 
     @Test
-    public void logout() throws InterruptedException {
+    public void loginWithInvalidEmailCorrectPassword() throws InterruptedException {
+        LoginPage loginPage = new LoginPage(driver);
+        HomePage homePage = new HomePage(driver);
+
+        homePage.clickMyAccount();
+        loginPage.writeEmailField("mariussautiut@yahoo.co");
+        loginPage.writePasswordField("Test@123");
+        loginPage.clickLoginButton();
+
+        WebElement WarningValue = driver.findElement(By.xpath("//*[@id=\"account-login\"]/div[1]"));
+        String expectedText = "Warning: Your account has exceeded allowed number of login attempts. Please try again in 1 hour.";
+        String actualText = WarningValue.getText();
+        Assert.assertEquals(actualText,expectedText, "The page text is not as expected");
+
+    }
+
+    @Test
+    public void loginWithCorrectEmailInvalidPassword() throws InterruptedException {
+        LoginPage loginPage = new LoginPage(driver);
+        HomePage homePage = new HomePage(driver);
+
+        homePage.clickMyAccount();
+        loginPage.writeEmailField("mariussautiut@yahoo.com");
+        loginPage.writePasswordField("Test@12");
+        loginPage.clickLoginButton();
+
+        WebElement WarningValue = driver.findElement(By.xpath("//*[@id=\"account-login\"]/div[1]"));
+        String expectedText = "Warning: No match for E-Mail Address and/or Password.";
+        String actualText = WarningValue.getText();
+        Assert.assertEquals(actualText,expectedText, "The page text is not as expected");
+
+    }
+
+    @Test
+    public void logoutSuccess() throws InterruptedException {
         HomePage homePage = new HomePage(driver);
 
         homePage.clickMyAccount();
@@ -51,6 +85,5 @@ public class LoginTestCases extends BasePage {
         Assert.assertEquals(actualText,expectedText, "The page text is not as expected");
 
     }
-
 
 }

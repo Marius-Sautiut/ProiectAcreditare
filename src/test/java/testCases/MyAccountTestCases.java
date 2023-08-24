@@ -20,39 +20,7 @@ public class MyAccountTestCases extends BasePage {
         myAccountPages = new MyAccountPages(driver);
     }
 
-    @Test
-    public void loginWithInvalidEmailCorrectPassword() throws InterruptedException {
-        LoginPage loginPage = new LoginPage(driver);
-        HomePage homePage = new HomePage(driver);
 
-        homePage.clickMyAccount();
-        loginPage.writeEmailField("mariussautiut@yahoo.co");
-        loginPage.writePasswordField("Test@123");
-        loginPage.clickLoginButton();
-
-        WebElement WarningValue = driver.findElement(By.xpath("//*[@id=\"account-login\"]/div[1]"));
-        String expectedText = "Warning: Your account has exceeded allowed number of login attempts. Please try again in 1 hour.";
-        String actualText = WarningValue.getText();
-        Assert.assertEquals(actualText,expectedText, "The page text is not as expected");
-
-    }
-
-    @Test
-    public void loginWithCorrectEmailInvalidPassword() throws InterruptedException {
-        LoginPage loginPage = new LoginPage(driver);
-        HomePage homePage = new HomePage(driver);
-
-        homePage.clickMyAccount();
-        loginPage.writeEmailField("mariussautiut@yahoo.com");
-        loginPage.writePasswordField("Test@12");
-        loginPage.clickLoginButton();
-
-        WebElement WarningValue = driver.findElement(By.xpath("//*[@id=\"account-login\"]/div[1]"));
-        String expectedText = "Warning: No match for E-Mail Address and/or Password.";
-        String actualText = WarningValue.getText();
-        Assert.assertEquals(actualText,expectedText, "The page text is not as expected");
-
-    }
 
     @Test
     public void loginWithValidCredentials() throws InterruptedException {
@@ -70,9 +38,8 @@ public class MyAccountTestCases extends BasePage {
         Assert.assertEquals(actualText,expectedText, "The page text is not as expected");
 
     }
-
     @Test
-    public void verifyFieldErrorsForEditAccount() throws InterruptedException {
+    public void verifyFieldErrorsForFirstNameFromEditAccount() throws InterruptedException {
         LoginPage loginPage = new LoginPage(driver);
         HomePage homePage = new HomePage(driver);
 
@@ -90,6 +57,18 @@ public class MyAccountTestCases extends BasePage {
         String actualText = FieldFirstNameError.getText();
         Assert.assertEquals(actualText,expectedText, "The page text is not as expected");
 
+    }
+
+    @Test
+    public void verifyFieldErrorsForLastNameFromEditAccount() throws InterruptedException {
+        LoginPage loginPage = new LoginPage(driver);
+        HomePage homePage = new HomePage(driver);
+
+        homePage.clickMyAccount();
+        loginPage.writeEmailField("mariussautiut@yahoo.com");
+        loginPage.writePasswordField("Test@123");
+        loginPage.clickLoginButton();
+        myAccountPages.clickEditAccount();
         myAccountPages.clickFieldLastName();
         myAccountPages.clearFieldLastName();
         myAccountPages.clickContinueButton();
@@ -97,8 +76,20 @@ public class MyAccountTestCases extends BasePage {
         WebElement FieldLastNameError = driver.findElement(By.xpath("//*[@id=\"content\"]/form/fieldset/div[2]/div/div"));
         String expectedLastNameErrorText = "Last Name must be between 1 and 32 characters!";
         String actualLastNameErrorText = FieldLastNameError.getText();
-        Assert.assertEquals(actualText,expectedText, "The page text is not as expected");
+        Assert.assertEquals(actualLastNameErrorText,expectedLastNameErrorText, "The page text is not as expected");
 
+    }
+
+    @Test
+    public void verifyFieldErrorsForFieldEmailFromEditAccount() throws InterruptedException {
+        LoginPage loginPage = new LoginPage(driver);
+        HomePage homePage = new HomePage(driver);
+
+        homePage.clickMyAccount();
+        loginPage.writeEmailField("mariussautiut@yahoo.com");
+        loginPage.writePasswordField("Test@123");
+        loginPage.clickLoginButton();
+        myAccountPages.clickEditAccount();
         myAccountPages.clickFieldEmail();
         myAccountPages.clearFieldEmail();
         myAccountPages.clickContinueButton();
@@ -106,9 +97,20 @@ public class MyAccountTestCases extends BasePage {
         WebElement FieldEmailError = driver.findElement(By.xpath("//*[@id=\"content\"]/form/fieldset/div[3]/div/div"));
         String expectedEmailErrorText = "E-Mail Address does not appear to be valid!";
         String actualEmailErrorText = FieldEmailError.getText();
-        Assert.assertEquals(actualText,expectedText, "The page text is not as expected");
+        Assert.assertEquals(actualEmailErrorText,expectedEmailErrorText, "The page text is not as expected");
 
+    }
 
+    @Test
+    public void verifyFieldErrorsForFieldTelephoneFromEditAccount() throws InterruptedException {
+        LoginPage loginPage = new LoginPage(driver);
+        HomePage homePage = new HomePage(driver);
+
+        homePage.clickMyAccount();
+        loginPage.writeEmailField("mariussautiut@yahoo.com");
+        loginPage.writePasswordField("Test@123");
+        loginPage.clickLoginButton();
+        myAccountPages.clickEditAccount();
         myAccountPages.clickFieldTelephone();
         myAccountPages.clearFieldTelephone();
         myAccountPages.clickContinueButton();
@@ -116,10 +118,11 @@ public class MyAccountTestCases extends BasePage {
         WebElement FieldTelephoneError = driver.findElement(By.xpath("//*[@id=\"content\"]/form/fieldset/div[4]/div/div"));
         String expectedTelephoneErrorText = "Telephone must be between 3 and 32 characters!";
         String actualTelephoneErorText = FieldTelephoneError.getText();
-        Assert.assertEquals(actualText,expectedText, "The page text is not as expected");
+        Assert.assertEquals(actualTelephoneErorText,expectedTelephoneErrorText, "The page text is not as expected");
 
 
     }
+
 
     @Test
     public void editAccountwithSuccess() throws InterruptedException {
