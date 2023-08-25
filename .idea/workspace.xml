@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7572504f-e65f-47e4-92de-ea8aedf7b3b0" name="Changes" comment="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/java/pages/CheckoutPage.java&#10;#&#9;src/test/java/testCases/CheckoutTestCases.java">
-      <change beforePath="$PROJECT_DIR$/src/test/java/testCases/LoginTestCases.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testCases/LoginTestCases.java" afterDir="false" />
-    </list>
+    <list default="true" id="7572504f-e65f-47e4-92de-ea8aedf7b3b0" name="Changes" comment="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/java/pages/CheckoutPage.java&#10;#&#9;src/test/java/testCases/CheckoutTestCases.java" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,6 +20,7 @@
   <component name="Git.Settings">
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="WARN_ABOUT_CRLF" value="false" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/java/pages/BasePage.java" root0="FORCE_HIGHLIGHTING" />
@@ -259,7 +258,21 @@
       <option name="project" value="LOCAL" />
       <updated>1692941925525</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/java/pages/CheckoutPage.java&#10;#&#9;src/test/java/testCases/CheckoutTestCases.java">
+      <created>1692942287997</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1692942287997</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/java/pages/CheckoutPage.java&#10;#&#9;src/test/java/testCases/CheckoutTestCases.java">
+      <created>1692942539574</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1692942539574</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
