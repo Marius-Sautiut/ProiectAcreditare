@@ -3,8 +3,8 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class CheckoutPage extends BasePage {
-    public CheckoutPage(WebDriver driver) {super(driver);}
+public class CartPage extends BasePage {
+    public CartPage(WebDriver driver) {super(driver);}
 
     By ProductName = By.linkText("HTC Touch HD");
     By RemoveItem = By.xpath("//*[@id=\"content\"]/form/div/table/tbody/tr/td[4]/div/div/button[2]");

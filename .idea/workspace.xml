@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="7572504f-e65f-47e4-92de-ea8aedf7b3b0" name="Changes" comment="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/java/pages/CheckoutPage.java&#10;#&#9;src/test/java/testCases/CheckoutTestCases.java">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/testCases/MyAccountTestCases.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testCases/MyAccountTestCases.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pages/CheckoutPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pages/CartPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testCases/CheckoutTestCases.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testCases/CartTestCases.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testCases/ProductsTestCases.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/testCases/ProductsTestCases.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,8 +56,8 @@
       <recent name="C:\JavaProject\ProiectAcreditare\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.MyAccountTestCases">
-    <configuration name="CheckoutTestCases" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.CartTestCases">
+    <configuration name="CartTestCases" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="ProiectAcreditare" />
       <extension name="coverage">
         <pattern>
@@ -65,7 +66,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="testCases" />
-      <option name="MAIN_CLASS_NAME" value="testCases.CheckoutTestCases" />
+      <option name="MAIN_CLASS_NAME" value="testCases.CartTestCases" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -126,10 +127,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.MyAccountTestCases" />
+        <item itemvalue="TestNG.CartTestCases" />
         <item itemvalue="TestNG.LoginTestCases" />
         <item itemvalue="TestNG.HomeTestCases" />
-        <item itemvalue="TestNG.CheckoutTestCases" />
+        <item itemvalue="TestNG.MyAccountTestCases" />
       </list>
     </recent_temporary>
   </component>
@@ -247,7 +248,14 @@
       <option name="project" value="LOCAL" />
       <updated>1692913506041</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Merge remote-tracking branch 'origin/master'&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;src/main/java/pages/CheckoutPage.java&#10;#&#9;src/test/java/testCases/CheckoutTestCases.java">
+      <created>1692915168300</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1692915168300</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

@@ -8,15 +8,15 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.*;
 
-public class CheckoutTestCases extends BasePage {
+public class CartTestCases extends BasePage {
 
-    private CheckoutPage checkoutPage;
+    private CartPage cartPage;
 
 
     @BeforeMethod
     public void setUp() {
         super.setUp();
-        checkoutPage = new CheckoutPage(driver);
+        cartPage = new CartPage(driver);
     }
 
         @Test
@@ -43,7 +43,7 @@ public class CheckoutTestCases extends BasePage {
         Thread.sleep(5000);
         productsPage.clickCheckoutButton();
         Thread.sleep(2000);
-        checkoutPage.clickRemoveItem();
+        cartPage.clickRemoveItem();
         Thread.sleep(5000);
 
         WebElement MyCheckoutValue = driver.findElement(By.xpath("//*[@id=\"content\"]/p"));
