@@ -53,7 +53,7 @@ public class LoginTestCases extends BasePage {
     }
 
     @Test
-    public void loginWithCorrectEmailInvalidPassword() throws InterruptedException {
+    public void loginWithCorrectEmailIncorrectPassword() throws InterruptedException {
         LoginPage loginPage = new LoginPage(driver);
         HomePage homePage = new HomePage(driver);
 
