@@ -36,7 +36,7 @@ public class LoginTestCases extends BasePage {
     }
 
     @Test
-    public void loginWithInvalidEmailCorrectPassword() throws InterruptedException {
+    public void loginWithIncorrectEmailCorrectPassword() throws InterruptedException {
         LoginPage loginPage = new LoginPage(driver);
         HomePage homePage = new HomePage(driver);
 
