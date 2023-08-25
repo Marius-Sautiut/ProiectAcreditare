@@ -2,13 +2,11 @@ package testCases;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-import pages.BasePage;
-import pages.HomePage;
-import pages.LoginPage;
-import pages.MyAccountPages;
+import pages.*;
 
 public class MyAccountTestCases extends BasePage {
 
@@ -240,7 +238,7 @@ public class MyAccountTestCases extends BasePage {
     }
 
     @Test
-    public void AddNewAddressBook() throws InterruptedException {
+    public void AddNewAddressBookAndDeleteAfter() throws InterruptedException {
         LoginPage loginPage = new LoginPage(driver);
         HomePage homePage = new HomePage(driver);
 
@@ -255,7 +253,7 @@ public class MyAccountTestCases extends BasePage {
         myAccountPages.clickFieldLastName();
         myAccountPages.writeLastNameField("Mircea");
         myAccountPages.clickAddress1();
-        myAccountPages.writeAddress1("Str Sambetei, Nr 1, P1, apt 4");
+        myAccountPages.writeAddress1("Str Stiriei, Nr 1, P1, apt 4");
         myAccountPages.clickCty();
         myAccountPages.writetCity("Oradea");
         myAccountPages.clickPostcode();
@@ -274,7 +272,6 @@ public class MyAccountTestCases extends BasePage {
         String actualText = "Your address has been successfully added";
         String expectedText = AddressSuccessfullyAdded.getText();
         Assert.assertEquals(actualText,expectedText, "The page text is not as expected");
-
     }
 
     @Test
@@ -489,6 +486,44 @@ public class MyAccountTestCases extends BasePage {
         String actualText = "Please select a region / state!";
         String expectedText = CheckRegionStateErrorField.getText();
         Assert.assertEquals(actualText,expectedText, "The page text is not as expected");
+
+    }
+
+    @Test
+    public void AddItemToCheckListAndCheckIfItsPresentAndAfterThatRemoveItAndCheckIfItIsRemoved() throws InterruptedException {
+        LoginPage loginPage = new LoginPage(driver);
+        HomePage homePage = new HomePage(driver);
+        ProductsPage productsPage = new ProductsPage(driver);
+        Actions action = new Actions(driver);
+
+        homePage.clickMyAccount();
+        loginPage.writeEmailField("mariussautiut@yahoo.com");
+        loginPage.writePasswordField("Test@123");
+        loginPage.clickLoginButton();
+        homePage.clickHomeButton();
+        homePage.clickCategoryDesktop();
+        //Hover over the product
+        WebElement ele = driver.findElement(By.id("mz-product-grid-image-28-212408"));
+        action.moveToElement(ele).perform();
+
+        productsPage.clickAddToWatchlist();
+        Thread.sleep(4000);
+        homePage.clickMyAccount();
+        Thread.sleep(2000);
+        myAccountPages.clickWishList();
+        Thread.sleep(1000);
+
+        WebElement ProductName = driver.findElement(By.linkText("HTC Touch HD"));
+        String actualText = "HTC Touch HD";
+        String expectedText = ProductName.getText();
+        Assert.assertEquals(actualText,expectedText, "The page text is not as expected");
+
+        myAccountPages.clickRemoveWishListItem();
+        Thread.sleep(7000);
+        WebElement CheckIfWishListIsEmpty = driver.findElement(By.xpath("//*[@id=\"content\"]/p"));
+        String actualText1 = "No results!";
+        String expectedText2 = CheckIfWishListIsEmpty.getText();
+        Assert.assertEquals(actualText1,expectedText2, "The page text is not as expected");
 
     }
 

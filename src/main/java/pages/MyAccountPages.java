@@ -37,6 +37,8 @@ public class MyAccountPages extends BasePage {
     By RegionState = By.cssSelector("[name=\"zone_id\"]");
     By RegionBihor = By.xpath("//*[@id=\"input-zone\"]/option[6]");
     By DefaultRadioButton = By.xpath("//*[@id=\"content\"]/form/fieldset/div[10]/div/div[1]/label/input");
+    By Wishlist = By.linkText("Wish List");
+    By RemoveWishlistItem = By.xpath("//*[@id=\"content\"]/div[1]/table/tbody/tr/td[6]/a");
 
     public void clickEditAccount() { driver.findElement(EditAccout).click(); }
     public void clickFieldFirstName() {driver.findElement(SelectFieldFirstName).click(); }
@@ -72,7 +74,8 @@ public class MyAccountPages extends BasePage {
     public void selectBihor() {driver.findElement(RegionBihor).click();}
 
     public void clickRadioButton() {driver.findElement(DefaultRadioButton).click();}
-
+    public void clickWishList() {driver.findElement(Wishlist).click();}
+    public void clickRemoveWishListItem() {driver.findElement(RemoveWishlistItem).click();}
 
 
 }

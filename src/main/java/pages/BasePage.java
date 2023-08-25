@@ -27,8 +27,8 @@ public class BasePage {
         driver.get(baseURL);
 
     }
-//    @AfterMethod
-//    public void tearDown() {
-//        driver.close();
-//    }
+    @AfterMethod
+    public void tearDown() {
+        driver.close();
+    }
 }

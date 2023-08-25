@@ -28,6 +28,7 @@ public class HomePage extends BasePage{
     By CategoryDesktop = By.cssSelector("[alt=\"Desktops\"]");
     By HomeButton = By.linkText("Home");
 
+
     public void clickMyAccount() { driver.findElement(MyAccount).click(); }
     public void clickShopByCategory() { driver.findElement(ShopByCategory).click(); }
     public void clickCategoryComponents() { driver.findElement(CategoryComponents).click(); }
@@ -48,6 +49,7 @@ public class HomePage extends BasePage{
     public void clickWebCameras() { driver.findElement(WebCameras).click();}
     public void clickCategoryDesktop() { driver.findElement(CategoryDesktop).click(); }
     public void clickHomeButton() { driver.findElement(HomeButton).click(); }
+
 
 
 

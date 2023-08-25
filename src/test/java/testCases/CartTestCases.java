@@ -54,7 +54,7 @@ public class CartTestCases extends BasePage {
     }
 
     @Test
-    public void clickAddAndCheckIfIsAddedToCheckout() throws InterruptedException {
+    public void AddProductToCartAndCheckIfItsAdded() throws InterruptedException {
         LoginPage loginPage = new LoginPage(driver);
         HomePage homePage = new HomePage(driver);
         ProductsPage productsPage = new ProductsPage(driver);
