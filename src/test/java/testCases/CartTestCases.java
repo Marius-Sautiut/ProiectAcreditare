@@ -39,7 +39,6 @@ public class CartTestCases extends BasePage {
         productsPage.clickAddProductHtcTouchHdToCart();
         Thread.sleep(12000);
         productsPage.clickCart();
-//        Thread.sleep(8000);
         Thread.sleep(5000);
         productsPage.clickCheckoutButton();
         Thread.sleep(2000);
@@ -73,7 +72,6 @@ public class CartTestCases extends BasePage {
         productsPage.clickAddProductHtcTouchHdToCart();
         Thread.sleep(12000);
         productsPage.clickCart();
-//        Thread.sleep(8000);
         Thread.sleep(5000);
         productsPage.clickCheckoutButton();
 
