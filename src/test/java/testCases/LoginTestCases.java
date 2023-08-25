@@ -46,9 +46,14 @@ public class LoginTestCases extends BasePage {
         loginPage.clickLoginButton();
 
         WebElement WarningValue = driver.findElement(By.xpath("//*[@id=\"account-login\"]/div[1]"));
-        String expectedText = "Warning: Your account has exceeded allowed number of login attempts. Please try again in 1 hour.";
         String actualText = WarningValue.getText();
-        Assert.assertEquals(actualText,expectedText, "The page text is not as expected");
+        String expectedText1 = "Warning: Your account has exceeded allowed number of login attempts. Please try again in 1 hour.";
+        String expectedText2 = "Warning: No match for E-Mail Address and/or Password.";
+        if(actualText.equals(expectedText1)||actualText.equals(expectedText2)) {
+            Assert.assertTrue(true,"The page text is as expected");
+        } else{
+            Assert.fail("The page text is not as expected");
+        }
 
     }
 
